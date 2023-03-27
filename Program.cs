@@ -3,6 +3,7 @@
 class Mobil
 {
     // Properties
+
     public string Warna { get; set; }
     public int JumlahPintu { get; set; }
     public string Merek { get; set; }
@@ -17,6 +18,16 @@ class Mobil
         Merek = mrk;
         Model = mdl;
         TahunKeluaran = thn;
+    }
+
+    public void Gas(int kecepatan )
+    {
+        Console.WriteLine("Mobil " + Model + "berjalan dengan kecepatan " + kecepatan + "KM/h");
+    }
+
+    public void Klakson()
+    {
+        Console.WriteLine("Mobil berbunyi :" + "Tinn Tinnn");
     }
 
     // Method untuk menampilkan informasi mobil
@@ -36,5 +47,7 @@ class Program
     {
         Mobil mobil1 = new Mobil("Merah", 4, "Toyota", "Avanza", 2020);
         mobil1.TampilkanInfo();
+        mobil1.Gas(200);
+        mobil1.Klakson();
     }
 }
