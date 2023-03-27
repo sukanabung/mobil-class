@@ -1,0 +1,40 @@
+﻿using System;
+
+class Mobil
+{
+    // Properties
+    public string Warna { get; set; }
+    public int JumlahPintu { get; set; }
+    public string Merek { get; set; }
+    public string Model { get; set; }
+    public int TahunKeluaran { get; set; }
+
+    // Constructor
+    public Mobil(string wrn, int jmlPintu, string mrk, string mdl, int thn)
+    {
+        Warna = wrn;
+        JumlahPintu = jmlPintu;
+        Merek = mrk;
+        Model = mdl;
+        TahunKeluaran = thn;
+    }
+
+    // Method untuk menampilkan informasi mobil
+    public void TampilkanInfo()
+    {
+        Console.WriteLine("Warna: " + Warna);
+        Console.WriteLine("Jumlah Pintu: " + JumlahPintu);
+        Console.WriteLine("Merek: " + Merek);
+        Console.WriteLine("Model: " + Model);
+        Console.WriteLine("Tahun Keluaran: " + TahunKeluaran);
+    }
+}
+
+class Program
+{
+    static void Main(string[] args)
+    {
+        Mobil mobil1 = new Mobil("Merah", 4, "Toyota", "Avanza", 2020);
+        mobil1.TampilkanInfo();
+    }
+}
